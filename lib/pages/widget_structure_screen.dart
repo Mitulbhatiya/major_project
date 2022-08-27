@@ -89,13 +89,13 @@ class _WidgetStructureScreenState extends State<WidgetStructureScreen> {
           SpeedDial(
               animatedIcon: AnimatedIcons.menu_close,
               animatedIconTheme: IconThemeData(size: 28.0),
-              backgroundColor: Colors.green[900],
+              backgroundColor: Colors.blue,
               visible: true,
               curve: Curves.bounceInOut,
               children: [
                 SpeedDialChild(
                   child: Icon(Icons.chrome_reader_mode, color: Colors.white),
-                  backgroundColor: Colors.green,
+                  backgroundColor: Colors.blue,
                   onTap: () {
                     Navigator.push(
                         context,
@@ -110,7 +110,7 @@ class _WidgetStructureScreenState extends State<WidgetStructureScreen> {
 
                 SpeedDialChild(
                   child: Icon(Icons.laptop_chromebook, color: Colors.white),
-                  backgroundColor: Colors.green,
+                  backgroundColor: Colors.blue,
                   onTap: () {
                     Navigator.push(
                         context,
