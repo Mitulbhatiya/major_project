@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:major_project/pages/home_screen.dart';
 import 'package:major_project/pages/splash_screen.dart';
 
 void main() {
@@ -20,6 +21,9 @@ void main() {
           scaffoldBackgroundColor: Colors.white,
         ),
         home: MyApp(),
+        routes: {
+          'home': (context)=>HomeScreen()
+        },
       ));
 }
 class MyApp extends StatelessWidget {
