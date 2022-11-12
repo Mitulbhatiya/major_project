@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../components/learn_elements.dart';
 import 'detailPage.dart';
 
 class Learn_Flutter extends StatefulWidget {
@@ -10,19 +11,13 @@ class Learn_Flutter extends StatefulWidget {
 }
 
 class _Learn_FlutterState extends State<Learn_Flutter> {
-  List main = [
-    'Flutter Development Course',
-    'Books',
-    'Article',
-    'What to do next?'
-  ];
 
-  List sub = [
-    'Beginner Level',
-    'Intermediate Level',
-    'Advance Level',
-    'Advance Level'
-  ];
+  // List sub = [
+  //   'Flutter Development Course',
+  //   'Books',
+  //   'Article',
+  //   '',
+  // ];
 
   List icon = [
     Icon(Icons.laptop,color: Colors.orange,),
@@ -31,10 +26,12 @@ class _Learn_FlutterState extends State<Learn_Flutter> {
     Icon(Icons.error,color: Colors.blue,)
   ];
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar:
+      AppBar(
         backgroundColor: Colors.white,
         leading: InkWell(
             onTap: () {
@@ -60,18 +57,19 @@ class _Learn_FlutterState extends State<Learn_Flutter> {
             ),
           ),
           ListView.builder(
-              itemCount: main.length,
+              itemCount: learnList.length,
               itemBuilder: (context, index) {
+                learn _learn=learnList[index];
                 return ListTile(
                   onTap: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context){
-                      return DetailPage();
+                      return DetailPage(aname: _learn.main,cname: _learn.sub,cdetail: _learn.text,curl: _learn.url,);
                     }));
                   },
-                  tileColor: Colors.green,
-                  title: Text("${main[index]}"),
+                  tileColor: Colors.white,
+                  title: Text("${_learn.main}"),
                   leading: icon[index],
-                  subtitle: Text("${sub[index]}"),
+                  // subtitle: Text("${sub[index]}"),
                 );
               })
         ],

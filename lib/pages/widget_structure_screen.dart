@@ -100,7 +100,7 @@ class _WidgetStructureScreenState extends State<WidgetStructureScreen> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => CodeScreen(root)));
+                            builder: (context) => CodeScreen(root,currNode)));
                   },
                   label: 'Code',
                   labelStyle: TextStyle(

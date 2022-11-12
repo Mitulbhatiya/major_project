@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:major_project/pages/loginpage.dart';
 
 
 import 'home_screen.dart';
